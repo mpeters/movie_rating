@@ -63,7 +63,8 @@ While developing the movie_rating, it's useful to be able to run the
 script in a shell in the container. This is done easily enough with
 `docker run`:
 
-    docker run -it --entrypoint /bin/sh -e OMDB_API_KEY -v $PWD:/usr/src/app move_ratings
+    docker run -it --rm --entrypoint /bin/sh -e OMDB_API_KEY -v $PWD:/usr/src/app move_ratings
+    /usr/src/app # ./movie_rating.py --title 'Guardians of the Galaxy'
 
 ## Built With
 
