@@ -49,6 +49,14 @@ same title.
 If you don't specify the API key in the environment, then it must be
 given here.
 
+## Running the tests
+
+Just like running the movie_rating program, except you must pass the
+API Key as an environment variable. Then you override the entrypoint to
+be `pytest`
+
+    docker run -e OMDB_API_KEY --entrypoint pytest movie_rating
+
 ## Built With
 
 * Python3
@@ -60,5 +68,5 @@ given here.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License.
 
