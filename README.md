@@ -57,6 +57,14 @@ be `pytest`
 
     docker run -e OMDB_API_KEY --entrypoint pytest movie_rating
 
+## Development
+
+While developing the movie_rating, it's useful to be able to run the
+script in a shell in the container. This is done easily enough with
+`docker run`:
+
+    docker run -it --entrypoint /bin/sh -e OMDB_API_KEY -v $PWD:/usr/src/app move_ratings
+
 ## Built With
 
 * Python3
