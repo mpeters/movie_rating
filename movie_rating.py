@@ -35,12 +35,6 @@ def get_rotten_tomatoes_rating(api_key, title, year=None):
 
     return rt_rating
 
-
-def fatal(msg):
-    """Print the message to STDERR and then exit with non-zero error code"""
-    print(msg, file=sys.stderr)
-    sys.exit(1)
-
 def omdb_data(params):
     """Make the API request to OMDB and return the JSON data"""
     # try to make the request
@@ -69,6 +63,10 @@ def omdb_data(params):
 
     return response_data
 
+def fatal(msg):
+    """Print the message to STDERR and then exit with non-zero error code"""
+    print(msg, file=sys.stderr)
+    sys.exit(1)
 
 if __name__ == "__main__":
     ARG_PARSER = argparse.ArgumentParser()
